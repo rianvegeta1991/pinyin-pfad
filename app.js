@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Bedienung, Ansichten, Übungsbühne
+/* Pinyin-Trainer – Bedienung, Ansichten, Übungsbühne
  *
  * Version: die minor-Zahl zählt als ganze Zahl weiter (nach 1.9 kommt 1.10),
  * genau wie in den Schwesterprojekten rule-detection und soundcape.
@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var APP_VERSION = '1.0';
+  var APP_VERSION = '1.1';
 
   /* ---------- kleine Helfer ---------- */
 
@@ -1047,6 +1047,13 @@
     $$('.blende').forEach(function (bl) {
       bl.onclick = function (e) { if (e.target === bl) bl.classList.remove('an'); };
     });
+
+    /* Das Logo führt von jeder Ansicht zurück auf den Startbildschirm und räumt
+       dabei ein offenes Blatt weg – sonst bliebe es über dem Dashboard liegen. */
+    $('#marke').onclick = function () {
+      $$('.blende').forEach(function (bl) { bl.classList.remove('an'); });
+      zeige('heute');
+    };
 
     $('#btn-zahnrad').onclick = function () { einstellungenFuellen(); blattAuf('bl-einst'); };
     $('#btn-ses-ende').onclick = function () {

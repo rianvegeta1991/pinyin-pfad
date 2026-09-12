@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Wortschatz B2
+/* Pinyin-Trainer – Wortschatz B2
  * Format: [hanzi, pinyin, deutsch, wortart, beispielPinyin?, beispielDe?, beispielHanzi?]
  */
 VokabelDaten.add('B2', {

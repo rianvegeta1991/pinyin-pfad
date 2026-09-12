@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pinyin-Pfad – Chinesisch lernen</title>
+<title>Pinyin-Trainer – Chinesisch lernen</title>
 <meta name="description" content="Mandarin-Chinesisch lernen von A1 bis B2 – Pinyin statt Schriftzeichen, mit Vokabeltrainer, Grammatik und Spaced Repetition.">
 <meta name="theme-color" content="#12141c">
 <link rel="manifest" href="manifest.webmanifest">
@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 /* ============================================================
-   Pinyin-Pfad – Oberfläche
+   Pinyin-Trainer – Oberfläche
    Farbwelt: Tuscheblau als Grund, Zinnoberrot als Akzent, Gold für
    Fortschritt. Alles in einer Spalte, Handy zuerst (375 px aufwärts).
    ============================================================ */
@@ -48,7 +48,15 @@ b,strong{font-weight:650}
   border-bottom:1px solid var(--linie);
 }
 #kopf-in{max-width:560px;margin:0 auto;height:var(--kopf);display:flex;align-items:center;gap:10px;padding:0 var(--sp)}
-#marke{display:flex;align-items:center;gap:9px;font-weight:650;letter-spacing:.2px}
+/* Das Logo ist ein Knopf: er führt von überall zurück auf den Startbildschirm.
+   Der negative Rand links hält die Schrift trotz Innenabstand am Seitenrand bündig. */
+#marke{
+  display:flex;align-items:center;gap:9px;font-weight:650;letter-spacing:.2px;
+  margin-left:-8px;padding:6px 9px;border-radius:10px;
+  transition:background .15s,transform .1s
+}
+#marke:hover{background:var(--karte)}
+#marke:active{transform:scale(.96)}
 #marke svg{width:24px;height:24px;flex:none}
 #kopf-rechts{margin-left:auto;display:flex;align-items:center;gap:6px}
 .chip{
@@ -378,15 +386,15 @@ select.wahlfeld{
 
   <header id="kopf">
     <div id="kopf-in">
-      <div id="marke">
+      <button id="marke" aria-label="Zum Startbildschirm" title="Zum Startbildschirm">
         <svg viewBox="0 0 48 48" aria-hidden="true">
           <path d="M8 38 L18 30 L28 32 L40 18" fill="none" stroke="#e5b451" stroke-width="4"
                 stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="40" cy="18" r="4.5" fill="#e0533f"/>
           <path d="M14 12 q8 4 16 0" fill="none" stroke="#e0533f" stroke-width="3.4" stroke-linecap="round"/>
         </svg>
-        <span>Pinyin-Pfad</span>
-      </div>
+        <span>Pinyin-Trainer</span>
+      </button>
       <div id="kopf-rechts">
         <span class="chip gold" id="chip-streak" title="Tage in Folge">0</span>
         <span class="chip" id="chip-level">A1</span>
@@ -642,7 +650,7 @@ select.wahlfeld{
     </div>
 
     <p class="mini" style="margin-top:16px;text-align:center">
-      Pinyin-Pfad <span id="app-version"></span> · <span id="opt-umfang"></span>
+      Pinyin-Trainer <span id="app-version"></span> · <span id="opt-umfang"></span>
     </p>
   </div>
 </div>
@@ -677,7 +685,7 @@ select.wahlfeld{
       </button>
     </div>
     <div id="pwa-direkt" style="display:none">
-      <p class="leise">Dein Browser kann Pinyin-Pfad direkt als App einrichten.</p>
+      <p class="leise">Dein Browser kann Pinyin-Trainer direkt als App einrichten.</p>
       <button class="knopf abstand" id="pwa-jetzt">Jetzt installieren</button>
     </div>
     <div id="pwa-ios" style="display:none">

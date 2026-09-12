@@ -1,5 +1,5 @@
 /**
- * Pinyin-Pfad – Datenmodell
+ * Pinyin-Trainer – Datenmodell
  *
  * Diese Datei wird nicht ausgeliefert und nicht kompiliert (auf dem Rechner gibt es
  * kein Node). Sie ist die verbindliche Beschreibung der Strukturen, die `daten.js`,

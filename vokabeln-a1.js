@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Wortschatz A1
+/* Pinyin-Trainer – Wortschatz A1
  * Format: [hanzi, pinyin, deutsch, wortart, beispielPinyin?, beispielDe?, beispielHanzi?]
  * Wortart: n=Nomen v=Verb a=Adjektiv d=Adverb p=Partikel s=Sonstiges
  */

@@ -1,4 +1,4 @@
-# Pinyin-Pfad
+# Pinyin-Trainer
 
 Browser-App (PWA) zum Lernen von Mandarin-Chinesisch, Niveau **A1 bis B2**.
 **Deutsch ist die Quellsprache** (Code, Kommentare, Commits, Oberfläche).
@@ -11,6 +11,22 @@ Browser-App (PWA) zum Lernen von Mandarin-Chinesisch, Niveau **A1 bis B2**.
   („Seite veroeffentlichen"). Von Hand: `gh workflow run pages.yml`.
 - Pages läuft über **GitHub Actions** (`build_type=workflow`), nicht über
   „Deploy from a branch" – siehe Fallstricke im Schwesterprojekt `rule-detection`.
+
+## Name (Achtung: zwei Namen)
+
+**Angezeigter Name ist seit v1.1 „Pinyin-Trainer"** (vorher „Pinyin-Pfad").
+**Intern bleibt alles beim Alten** – und das muss so bleiben:
+
+| bleibt `pinyin-pfad` | warum |
+|---|---|
+| Repo und Pages-URL `/pinyin-pfad/` | ein umbenanntes Repo leitet Pages nicht zuverlässig um; der geteilte Link muss halten |
+| Ordnername, `serve.ps1`-Eintrag in `launch.json` | kein Grund, die Arbeitskopie anzufassen |
+| `localStorage`-Schlüssel `pinyin-pfad-progress` / `-settings` / `-stats` | **Umbenennen löscht den gesamten Lernfortschritt jedes Nutzers.** Nie anfassen. |
+| SW-Cache-Präfix `pinyin-pfad-vN` | nur die Zahl hochzählen |
+
+Geändert wurde nur, was jemand zu sehen bekommt: `<title>`, das Logo im Kopf,
+`manifest.webmanifest` (`name`/`short_name`), die Fußzeile der Einstellungen und
+die Texte in README und Dateiköpfen.
 
 ## Der eine wichtige Grundsatz
 

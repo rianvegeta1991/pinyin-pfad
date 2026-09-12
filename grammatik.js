@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Grammatik-Registry
+/* Pinyin-Trainer – Grammatik-Registry
  *
  * Die Lektionen selbst stehen in `grammatik-a1.js` … `grammatik-b2.js` und melden sich
  * hier über `GrammatikDaten.add(liste)` an. Aufbau einer Lektion siehe typen.d.ts.

@@ -1,7 +1,7 @@
-/* Pinyin-Pfad – Service Worker (Offline-Cache)
+/* Pinyin-Trainer – Service Worker (Offline-Cache)
  * Bei Dateiänderungen die Versionsnummer hochzählen, sonst holt die installierte
  * PWA die alten Dateien aus dem Cache. */
-const CACHE = 'pinyin-pfad-v1';
+const CACHE = 'pinyin-pfad-v2';
 const ASSETS = [
   './',
   './index.html',

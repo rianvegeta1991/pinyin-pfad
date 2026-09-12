@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Spaced Repetition, Tagespensum, Statistik
+/* Pinyin-Trainer – Spaced Repetition, Tagespensum, Statistik
  *
  * Verfahren: Leitner mit SM-2-Anleihe. Sieben Fächer (0–6) mit festen Abständen;
  * eine richtige Antwort schiebt eine Stufe hoch, eine falsche zwei Stufen zurück

@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Übungsgenerator und Antwortprüfung
+/* Pinyin-Trainer – Übungsgenerator und Antwortprüfung
  *
  * Übungen werden **nicht gespeichert**, sondern bei jedem Aufruf neu erzeugt. Der
  * Grund ist Abwechslung: dieselbe Vokabel soll mal als Multiple Choice, mal als

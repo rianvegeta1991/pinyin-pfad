@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Themen und Vokabel-Registry
+/* Pinyin-Trainer – Themen und Vokabel-Registry
  *
  * Die Vokabeln selbst stehen in `vokabeln-a1.js` … `vokabeln-b2.js` und melden sich
  * hier über `VokabelDaten.add(level, map)` an. Erst `Daten.bauen()` macht daraus die

@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Satzbestand für Lückentexte
+/* Pinyin-Trainer – Satzbestand für Lückentexte
  *
  * Warum es diese Datei gibt: Ein Lückentext braucht einen Satz, der die gesuchte
  * Vokabel enthält. Jeder Vokabel einen eigenen Satz mitzugeben wäre doppelte Arbeit –

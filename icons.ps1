@@ -1,4 +1,4 @@
-# Pinyin-Pfad – PNG-Icons aus dem SVG-Motiv nachzeichnen.
+# Pinyin-Trainer – PNG-Icons aus dem SVG-Motiv nachzeichnen.
 #
 # Auf dem Rechner gibt es keinen SVG-Renderer, deshalb wird das Motiv hier mit
 # System.Drawing ein zweites Mal gezeichnet. Bei Logoaenderungen icon.svg,

@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Pinyin-Werkzeuge
+/* Pinyin-Trainer – Pinyin-Werkzeuge
  *
  * Der Grundsatz der App: Töne werden angezeigt, aber nie eingefordert. Alles, was
  * hier steht, dient diesem einen Zweck – eine Eingabe so weit zu entschärfen, dass

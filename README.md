@@ -1,4 +1,4 @@
-# Pinyin-Pfad
+# Pinyin-Trainer
 
 ## ▶ App starten: **https://rianvegeta1991.github.io/pinyin-pfad/**
 
@@ -72,7 +72,7 @@ Abend noch etwas offen ist.
 1. Die Adresse oben im Handy-Browser öffnen.
 2. Im Browser-Menü **„Zum Startbildschirm hinzufügen"** wählen – oder den
    Knopf **Installieren** in den Einstellungen.
-3. Ab jetzt startet Pinyin-Pfad über ein eigenes Icon im Vollbild und
+3. Ab jetzt startet Pinyin-Trainer über ein eigenes Icon im Vollbild und
    funktioniert auch ohne Internet.
 
 Der Lernfortschritt liegt ausschließlich auf dem Gerät (`localStorage`). Es gibt

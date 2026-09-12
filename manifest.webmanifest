@@ -1,6 +1,6 @@
 {
-  "name": "Pinyin-Pfad – Chinesisch lernen",
-  "short_name": "Pinyin-Pfad",
+  "name": "Pinyin-Trainer – Chinesisch lernen",
+  "short_name": "Pinyin-Trainer",
   "description": "Mandarin-Chinesisch von A1 bis B2 lernen – auf Pinyin-Basis, ohne Schriftzeichen-Pflicht. Vokabeltrainer, Grammatik und Spaced Repetition.",
   "lang": "de",
   "start_url": "./index.html",

@@ -1,4 +1,4 @@
-/* Pinyin-Pfad – Grammatik B1 */
+/* Pinyin-Trainer – Grammatik B1 */
 GrammatikDaten.add([
 
 {
