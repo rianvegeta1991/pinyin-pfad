@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Maskable: Android schneidet eine beliebige Form aus. Alles Wesentliche muss
+       im Sicherheitskreis (Radius 40 % = 205 px) liegen, der Grund geht randlos
+       durch. Deshalb dasselbe Motiv, nur zentriert und auf 82 % geschrumpft. -->
+  <rect width="512" height="512" fill="#12141c"/>
+  <g transform="translate(256,256) scale(0.82) translate(-273,-267)">
+    <path d="M150 132 q95 60 190 0" fill="none" stroke="#e0533f" stroke-width="26" stroke-linecap="round"/>
+    <path d="M110 400 L220 320 L320 345 L420 180" fill="none" stroke="#e5b451"
+          stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="420" cy="180" r="34" fill="#e0533f"/>
+  </g>
+</svg>
