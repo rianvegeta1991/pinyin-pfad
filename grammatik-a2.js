@@ -21,7 +21,7 @@ GrammatikDaten.add([
     '- bei Gewohnheiten: `Wǒ měi tiān hē kāfēi.` (kein `le`)\n' +
     '- bei Zuständen und Gefühlen: `Wǒ xǐhuan tā.` (kein `le`)\n' +
     '- **nach `méi`**: `Wǒ méi chī.` – niemals `méi chī le`\n\n' +
-    '**Frage:** `Nǐ chī le ma?` oder `Nǐ chī le méiyǒu?`\n\n' +
+    '**Frage:** `Nǐ chī le ma?` oder `Nǐ chī le méiyǒu?` – beides: Hast du gegessen?\n\n' +
     'Ein bloßes `Wǒ chī le` klingt oft unfertig – erwartet wird eine Ergänzung: eine Menge ' +
     '(`chī le liǎng wǎn`), ein Objekt (`chī le fàn`) oder ein Folgesatz.',
   examples: [
@@ -39,6 +39,7 @@ GrammatikDaten.add([
       note: '`le` steht direkt hinter dem Verb und markiert den Abschluss.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ méi chī le fàn.',
+      de: 'Ich habe nicht gegessen.',
       answer: ['Wǒ méi chī fàn.'],
       note: 'Nach `méi` fällt `le` immer weg.' },
     { type: 'multipleChoice',
@@ -53,6 +54,7 @@ GrammatikDaten.add([
       note: '`le` ist ein Aspekt, kein Tempus: es geht um „fertig“, nicht um „wann“.' },
     { type: 'transformation',
       prompt: 'Verneine: Tā mǎi le yí jiàn yīfu.',
+      de: 'Sie hat ein Kleidungsstück gekauft.',
       answer: ['Tā méi mǎi yīfu.', 'Tā méi mǎi yí jiàn yīfu.'],
       note: '`méi` tritt vor das Verb, `le` verschwindet.' },
     { type: 'sentenceOrder',
@@ -104,6 +106,7 @@ GrammatikDaten.add([
       note: '`guo` fragt nach der Erfahrung: „schon mal“.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ méi qù Zhōngguó guo le.',
+      de: 'Ich war noch nie in China.',
       answer: ['Wǒ méi qù guo Zhōngguó.'],
       note: '`guo` steht direkt hinter dem Verb, und nach `méi` fällt `le` weg.' },
     { type: 'multipleChoice',
@@ -118,6 +121,7 @@ GrammatikDaten.add([
       note: '`le` bezeichnet eine bestimmte abgeschlossene Reise, `guo` die Erfahrung an sich.' },
     { type: 'transformation',
       prompt: 'Verneine: Wǒ kàn guo zhè ge diànyǐng.',
+      de: 'Ich habe diesen Film schon mal gesehen.',
       answer: ['Wǒ méi kàn guo zhè ge diànyǐng.', 'Wǒ méiyǒu kàn guo zhè ge diànyǐng.'],
       note: 'Anders als bei `le` bleibt `guo` in der Verneinung stehen.' },
     { type: 'sentenceOrder',
@@ -145,7 +149,7 @@ GrammatikDaten.add([
     '**Drei Stufen der Betonung:**\n\n' +
     '- `zài` – neutral: „gerade“\n' +
     '- `zhèngzài` – nachdrücklich: „genau in diesem Moment“\n' +
-    '- `ne` am Satzende – umgangssprachlich, oft zusätzlich: `Tā zài kàn shū ne.`\n\n' +
+    '- `ne` am Satzende – umgangssprachlich, oft zusätzlich: `Tā zài kàn shū ne.` (Er liest gerade.)\n\n' +
     '**Verwechslungsgefahr:** Dasselbe `zài` bedeutet auch „sich befinden in“ ' +
     '(Lektion A1). Unterscheiden lässt sich das an dem, was folgt:\n\n' +
     '`Wǒ zài jiā.` – Ich bin zu Hause. (danach ein **Ort**)\n' +
@@ -181,6 +185,7 @@ GrammatikDaten.add([
       note: 'Ort danach = „sich befinden“; Verb danach = „gerade dabei sein“.' },
     { type: 'transformation',
       prompt: 'Verneine: Wǒ zài kàn diànshì.',
+      de: 'Ich sehe gerade fern.',
       answer: ['Wǒ méi zài kàn diànshì.', 'Wǒ méiyǒu zài kàn diànshì.'],
       note: 'Die Verlaufsform wird mit `méi(yǒu)` verneint, nicht mit `bù`.' },
     { type: 'sentenceOrder',
@@ -190,6 +195,7 @@ GrammatikDaten.add([
       hanzi: '他正在开会。' },
     { type: 'errorCorrection',
       prompt: 'Wǒ bù zài kàn diànshì.',
+      de: 'Ich sehe gerade nicht fern.',
       answer: ['Wǒ méi zài kàn diànshì.', 'Wǒ méiyǒu zài kàn diànshì.'],
       note: 'Laufende Handlungen verneint `méi`, nicht `bù`.' },
     { type: 'typing',
@@ -217,7 +223,7 @@ GrammatikDaten.add([
     '`kěyǐ` – dürfen, erlaubt sein.\n' +
     '`Wǒ kěyǐ jìnlái ma?` – Darf ich hereinkommen?\n\n' +
     '`huì` – können im Sinne von **gelernt haben** (A1) und außerdem „werden“ für ' +
-    'Vorhersagen: `Míngtiān huì xià yǔ.`\n\n' +
+    'Vorhersagen: `Míngtiān huì xià yǔ.` (Morgen wird es regnen.)\n\n' +
     '`yīnggāi` – sollen, sich gehören.\n' +
     '`Nǐ yīnggāi duō xiūxi.` – Du solltest dich mehr ausruhen.\n\n' +
     '**Der klassische Stolperstein:** `huì` und `néng` heißen beide „können“. ' +
@@ -244,6 +250,7 @@ GrammatikDaten.add([
       note: 'Hier verhindern äußere Umstände das Kommen – das ist `néng`.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ bù yào qù, wǒ hěn lèi.',
+      de: 'Ich möchte nicht gehen, ich bin müde.',
       answer: ['Wǒ bù xiǎng qù, wǒ hěn lèi.'],
       note: '`bù yào` heißt „tu das nicht!“. Den eigenen Unwillen drückt `bù xiǎng` aus.' },
     { type: 'sentenceOrder',
@@ -253,6 +260,7 @@ GrammatikDaten.add([
       hanzi: '你应该多休息。' },
     { type: 'transformation',
       prompt: 'Mache eine Erlaubnisfrage daraus: Wǒ jìnlái.',
+      de: 'Ich komme herein.',
       answer: ['Wǒ kěyǐ jìnlái ma?', 'Wǒ kěyǐ jìnlái ma'],
       note: '`kěyǐ` fragt nach Erlaubnis, `ma` macht die Frage.' },
     { type: 'typing',
@@ -294,6 +302,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Wǒ bǐ tā hěn gāo.',
+      de: 'Ich bin größer als er.',
       answer: ['Wǒ bǐ tā gāo.'],
       note: 'Im `bǐ`-Satz steht nie `hěn` vor dem Adjektiv.' },
     { type: 'fillBlank',
@@ -313,6 +322,7 @@ GrammatikDaten.add([
       note: 'Die übliche Verneinung des Vergleichs lautet `A méiyǒu B + Adjektiv`.' },
     { type: 'transformation',
       prompt: 'Drücke Gleichheit aus: Wǒ bǐ tā gāo.',
+      de: 'Ich bin größer als er.',
       answer: ['Wǒ gēn tā yíyàng gāo.', 'Wǒ hé tā yíyàng gāo.'],
       note: '`gēn ... yíyàng` heißt „genauso … wie“.' },
     { type: 'sentenceOrder',
@@ -348,7 +358,7 @@ GrammatikDaten.add([
     '**Wo steht das Objekt?** Bei einem Ort **zwischen** Verb und `lái`/`qù`:\n' +
     '`Tā huí jiā qù le.` – Er ist nach Hause gegangen. (nicht `huíqù jiā`)\n\n' +
     'Bei einem Gegenstand ist beides möglich: `Tā ná chūlái yì běn shū.` oder ' +
-    '`Tā ná chū yì běn shū lái.`',
+    '`Tā ná chū yì běn shū lái.` – beides: Er holte ein Buch heraus.',
   examples: [
     { pinyin: 'Qǐng jìnlái.', de: 'Kommen Sie bitte herein.', hanzi: '请进来。' },
     { pinyin: 'Tā jìnqù le.', de: 'Er ist hineingegangen.', hanzi: '他进去了。' },
@@ -367,9 +377,11 @@ GrammatikDaten.add([
       prompt: 'Du stehst draußen und siehst jemanden ins Haus gehen. Was sagst du?',
       options: ['Tā jìnqù le.', 'Tā jìnlái le.', 'Tā chūlái le.', 'Tā huílái le.'],
       answer: 'Tā jìnqù le.',
-      note: 'Vom Sprecher weg: `qù`.' },
+      note: 'Vom Sprecher weg: `qù`. Die vier Sätze heißen: `jìnqù` hineingehen · ' +
+            '`jìnlái` hereinkommen · `chūlái` herauskommen · `huílái` zurückkommen.' },
     { type: 'errorCorrection',
       prompt: 'Tā huíqù jiā le.',
+      de: 'Er ist nach Hause gegangen.',
       answer: ['Tā huí jiā qù le.'],
       note: 'Eine Ortsangabe steht zwischen Verb und `lái`/`qù`.' },
     { type: 'sentenceOrder',
@@ -379,6 +391,7 @@ GrammatikDaten.add([
       hanzi: '我回家去了。' },
     { type: 'transformation',
       prompt: 'Ändere den Standpunkt (der Sprecher ist jetzt drinnen): Tā jìnqù le.',
+      de: 'Er ist hineingegangen.',
       answer: ['Tā jìnlái le.'],
       note: '`qù` wird zu `lái`, wenn die Bewegung auf den Sprecher zuläuft.' },
     { type: 'typing',
@@ -439,10 +452,12 @@ GrammatikDaten.add([
       note: 'Das Ergebniskomplement sagt, ob die Handlung ihr Ziel erreicht hat.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ méi zhǎo dào le wǒ de yàoshi.',
+      de: 'Ich habe meinen Schlüssel nicht gefunden.',
       answer: ['Wǒ méi zhǎo dào wǒ de yàoshi.'],
       note: 'Nach `méi` fällt `le` weg, das Ergebniskomplement bleibt.' },
     { type: 'transformation',
       prompt: 'Verneine: Wǒ zuò wán le zuòyè.',
+      de: 'Ich habe die Hausaufgaben fertig gemacht.',
       answer: ['Wǒ méi zuò wán zuòyè.', 'Wǒ hái méi zuò wán zuòyè.'],
       note: '`méi` vor das Verb, `le` streichen.' },
     { type: 'sentenceOrder',
@@ -512,13 +527,16 @@ GrammatikDaten.add([
         'Tiānqì lěng ma?'
       ],
       answer: 'Tiānqì lěng le.',
-      note: 'Ohne `le` beschreibt der Satz nur einen Zustand, mit `le` dessen Eintreten.' },
+      note: 'Ohne `le` beschreibt der Satz nur einen Zustand, mit `le` dessen Eintreten: ' +
+            '„Es ist kalt geworden" gegen „Es ist kalt", „Es ist nicht kalt", „Ist es kalt?"' },
     { type: 'transformation',
       prompt: 'Drücke aus, dass du deinen Plan aufgibst: Wǒ qù.',
+      de: 'Ich gehe hin.',
       answer: ['Wǒ bú qù le.', 'Wǒ bù qù le.'],
       note: '`bù ... le` heißt „doch nicht mehr“.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ méi qù le.',
+      de: 'Ich bin nicht hingegangen.',
       answer: ['Wǒ méi qù.'],
       note: '`méi` und `le` vertragen sich nicht – bei der Verneinung fällt `le` weg.' },
     { type: 'typing',
@@ -546,10 +564,10 @@ GrammatikDaten.add([
     'etwas direkter und neutraler. `ma` kann je nach Betonung eine Erwartung mittragen ' +
     '(„du kommst doch, oder?“), A-nicht-A stellt die Frage offen.\n\n' +
     '**Zwei Verbote:**\n\n' +
-    '1. **Kein `ma` dazu.** `Nǐ qù bú qù ma?` ist falsch – eine Frageform reicht.\n' +
-    '2. **Kein `hěn`.** `Zhè ge hěn guì bú guì?` ist falsch. In der Frage fällt der Füller weg.\n\n' +
+    '1. **Kein `ma` dazu.** `Nǐ qù bú qù ma?` (Gehst du?) ist falsch – eine Frageform reicht.\n' +
+    '2. **Kein `hěn`.** `Zhè ge hěn guì bú guì?` (Ist das teuer?) ist falsch. In der Frage fällt der Füller weg.\n\n' +
     'Mit Modalverben wird das Modalverb gespiegelt, nicht das Hauptverb: ' +
-    '`Nǐ néng bù néng lái?`',
+    '`Nǐ néng bù néng lái?` (Kannst du kommen?)',
   examples: [
     { pinyin: 'Nǐ qù bú qù?', de: 'Gehst du?', hanzi: '你去不去？' },
     { pinyin: 'Zhè ge guì bú guì?', de: 'Ist das teuer?', hanzi: '这个贵不贵？' },
@@ -561,10 +579,12 @@ GrammatikDaten.add([
   drills: [
     { type: 'transformation',
       prompt: 'Mache eine A-nicht-A-Frage: Nǐ qù ma?',
+      de: 'Gehst du?',
       answer: ['Nǐ qù bú qù?', 'Nǐ qù bù qù?', 'Nǐ qù bú qù'],
       note: 'Das Verb wird bejaht und verneint wiederholt, `ma` entfällt.' },
     { type: 'errorCorrection',
       prompt: 'Nǐ qù bú qù ma?',
+      de: 'Gehst du?',
       answer: ['Nǐ qù bú qù?', 'Nǐ qù ma?', 'Nǐ qù bú qù'],
       note: 'A-nicht-A und `ma` schließen einander aus.' },
     { type: 'fillBlank',
@@ -584,6 +604,7 @@ GrammatikDaten.add([
       note: 'Bei Modalverben wird das Modalverb gespiegelt, nicht das Hauptverb.' },
     { type: 'errorCorrection',
       prompt: 'Zhè ge hěn guì bú guì?',
+      de: 'Ist das teuer?',
       answer: ['Zhè ge guì bú guì?', 'Zhè ge guì bù guì?'],
       note: 'In der A-nicht-A-Frage fällt `hěn` weg.' },
     { type: 'typing',
@@ -653,6 +674,7 @@ GrammatikDaten.add([
       hanzi: '我先吃饭，然后去工作。' },
     { type: 'errorCorrection',
       prompt: 'Suīrán hěn lèi, suǒyǐ wǒ hěn gāoxìng.',
+      de: 'Obwohl ich müde bin, freue ich mich.',
       answer: ['Suīrán hěn lèi, dànshì wǒ hěn gāoxìng.', 'Suīrán hěn lèi, kěshì wǒ hěn gāoxìng.'],
       note: 'Die Paare dürfen nicht gemischt werden: `suīrán` gehört zu `dànshì`/`kěshì`.' },
     { type: 'typing',

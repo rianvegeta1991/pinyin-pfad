@@ -296,7 +296,10 @@
       prompt: drill.prompt,
       correctAnswer: drill.answer,
       solutionNote: drill.note || null,
-      hanzi: drill.hanzi || null
+      hanzi: drill.hanzi || null,
+      /* Deutsche Bedeutung des chinesischen Satzes in der Aufgabe. Fehlt bei
+         Übersetzungsaufgaben absichtlich – dort wäre sie die Lösung. */
+      de: drill.de || null
     };
     if (drill.type === 'sentenceOrder') {
       ex.options = mischen(drill.options || drill.answer);

@@ -85,6 +85,12 @@ export interface Exercise {
   /** Zusatzanzeige (Hanzi, Hinweis, Musterlösung) – rein für die Oberfläche. */
   hint?: string;
   hanzi?: string;
+  /**
+   * Deutsche Bedeutung des chinesischen Satzes in der Aufgabe, wird über der
+   * Eingabe angezeigt. Fehlt bei Übersetzungsaufgaben (`typing` aus dem
+   * Deutschen, `sentenceOrder`) absichtlich – dort wäre sie die Lösung.
+   */
+  de?: string;
   /** Erläuterung, die nach dem Auflösen erscheint. */
   solutionNote?: string;
   /** Bei matching: die Paare in Reihenfolge der options. */
@@ -99,6 +105,14 @@ export interface GrammarDrill {
   answer: string | string[];
   note?: string;
   hanzi?: string;
+  /**
+   * Deutsche Bedeutung des chinesischen Satzes im `prompt`. Pflicht bei
+   * `errorCorrection` (die gemeinte Aussage) und `transformation` (der
+   * Ausgangssatz). Bei `fillBlank` steht sie stattdessen in Klammern im
+   * `prompt` selbst. Bei `typing` und `sentenceOrder` bleibt sie leer – dort
+   * ist die Übersetzung die Aufgabe.
+   */
+  de?: string;
 }
 
 export interface UserProgress {

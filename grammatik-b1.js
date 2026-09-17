@@ -17,11 +17,11 @@ GrammatikDaten.add([
     '**wiederholt** werden:\n\n' +
     '`Tā shuō Hànyǔ shuō de hěn hǎo.` – Er spricht sehr gut Chinesisch.\n\n' +
     'Ohne Wiederholung geht es nicht: `Tā shuō Hànyǔ de hěn hǎo` ist falsch. Alternativ ' +
-    'zieht man das Objekt nach vorn: `Tā Hànyǔ shuō de hěn hǎo.`\n\n' +
+    'zieht man das Objekt nach vorn: `Tā Hànyǔ shuō de hěn hǎo.` (ebenfalls: Er spricht sehr gut Chinesisch.)\n\n' +
     '**Verneint** wird das Adjektiv, nicht das Verb:\n' +
     '`Tā shuō de bù hǎo.` – Er spricht nicht gut. (nicht `Tā bù shuō de hǎo`)\n\n' +
     '**Frage:** `Tā shuō de zěnmeyàng?` – Wie spricht er? Oder A-nicht-A am Adjektiv: ' +
-    '`Tā shuō de hǎo bù hǎo?`\n\n' +
+    '`Tā shuō de hǎo bù hǎo?` (Spricht er gut?)\n\n' +
     '**Drei verschiedene `de`:** `的` (Besitz/Attribut), `得` (Gradkomplement), ' +
     '`地` (vor Verben, adverbial). Alle klingen gleich – in der tonlosen Schreibweise ' +
     'unterscheidet sie nur der Satzbau.',
@@ -36,6 +36,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Tā shuō Hànyǔ de hěn hǎo.',
+      de: 'Er spricht sehr gut Chinesisch.',
       answer: ['Tā shuō Hànyǔ shuō de hěn hǎo.', 'Tā Hànyǔ shuō de hěn hǎo.'],
       note: 'Mit Objekt muss das Verb wiederholt werden – oder das Objekt rückt nach vorn.' },
     { type: 'fillBlank',
@@ -54,6 +55,7 @@ GrammatikDaten.add([
       note: 'Verneint wird das Adjektiv nach `de`, nicht das Verb davor.' },
     { type: 'transformation',
       prompt: 'Füge das Objekt `Hànyǔ` ein: Tā shuō de hěn hǎo.',
+      de: 'Er spricht sehr gut.',
       answer: ['Tā shuō Hànyǔ shuō de hěn hǎo.', 'Tā Hànyǔ shuō de hěn hǎo.'],
       note: 'Beide Lösungen sind üblich: Verb verdoppeln oder Objekt vorziehen.' },
     { type: 'sentenceOrder',
@@ -103,6 +105,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Wǒ bǎ mén guān.',
+      de: 'Ich habe die Tür zugemacht.',
       answer: ['Wǒ bǎ mén guān shàng le.', 'Wǒ bǎ mén guān le.'],
       note: 'Nach `bǎ` darf das Verb nicht nackt stehen – es braucht eine Ergänzung.' },
     { type: 'fillBlank',
@@ -122,6 +125,7 @@ GrammatikDaten.add([
       note: '`kàn jiàn` verändert nichts am Objekt – Wahrnehmungsverben vertragen kein `bǎ`.' },
     { type: 'transformation',
       prompt: 'Baue mit `bǎ` um: Tā zuò wán le zuòyè.',
+      de: 'Er hat die Hausaufgaben fertig gemacht.',
       answer: ['Tā bǎ zuòyè zuò wán le.'],
       note: 'Das Objekt rückt hinter `bǎ`, die Ergänzung bleibt am Verb.' },
     { type: 'sentenceOrder',
@@ -156,9 +160,9 @@ GrammatikDaten.add([
     'zunehmend, aber in der gesprochenen Sprache gilt er noch.\n\n' +
     '**Wie bei `bǎ` braucht das Verb eine Ergänzung.** `Tā bèi pīpíng` ist unvollständig; ' +
     'mit `le` wird es richtig.\n\n' +
-    '**Verneinung** vor `bèi`: `Wǒ méi bèi pīpíng.`\n\n' +
+    '**Verneinung** vor `bèi`: `Wǒ méi bèi pīpíng.` (Ich wurde nicht kritisiert.)\n\n' +
     '**Umgangssprachliche Varianten:** `ràng`, `jiào` und `gěi` können `bèi` ersetzen – ' +
-    'dann muss der Handelnde aber genannt werden: `Wǒ de bēizi ràng tā dǎpò le.`',
+    'dann muss der Handelnde aber genannt werden: `Wǒ de bēizi ràng tā dǎpò le.` (Meine Tasse wurde von ihm zerbrochen.)',
   examples: [
     { pinyin: 'Wǒ de shǒujī bèi tōu le.', de: 'Mein Handy wurde gestohlen.', hanzi: '我的手机被偷了。' },
     { pinyin: 'Tā bèi lǎobǎn pīpíng le.', de: 'Er wurde vom Chef kritisiert.', hanzi: '他被老板批评了。' },
@@ -185,10 +189,12 @@ GrammatikDaten.add([
       note: 'Neutrale Sachverhalte formuliert man lieber aktiv, mit dem Objekt als Thema vorn.' },
     { type: 'errorCorrection',
       prompt: 'Tā bèi lǎobǎn pīpíng.',
+      de: 'Er wurde vom Chef kritisiert.',
       answer: ['Tā bèi lǎobǎn pīpíng le.'],
       note: 'Wie bei `bǎ` braucht das Verb im `bèi`-Satz eine Ergänzung, hier `le`.' },
     { type: 'transformation',
       prompt: 'Forme ins Passiv um: Lǎobǎn pīpíng le tā.',
+      de: 'Der Chef hat ihn kritisiert.',
       answer: ['Tā bèi lǎobǎn pīpíng le.'],
       note: 'Der Empfänger rückt nach vorn, der Handelnde hinter `bèi`.' },
     { type: 'sentenceOrder',
@@ -216,11 +222,11 @@ GrammatikDaten.add([
     '**Mit Objekt wird es kniffliger.** Drei zulässige Bauweisen:\n\n' +
     '1. Verb wiederholen: `Wǒ xué Hànyǔ xué le sān nián.`\n' +
     '2. Dauer zwischen Verb und Objekt, mit `de`: `Wǒ xué le sān nián de Hànyǔ.`\n' +
-    '3. Objekt vorziehen: `Hànyǔ wǒ xué le sān nián.`\n\n' +
+    '3. Objekt vorziehen: `Hànyǔ wǒ xué le sān nián.`\n\nAlle drei heißen: Ich habe drei Jahre Chinesisch gelernt.\n\n' +
     'Falsch wäre `Wǒ xué le Hànyǔ sān nián.`\n\n' +
     '**Häufigkeit** funktioniert genauso – `cì` (Mal) steht hinter dem Verb:\n' +
     '`Wǒ qù guo sān cì.` – Ich war dreimal dort.\n' +
-    'Bei einem Ortsobjekt darf die Angabe davor stehen: `Wǒ qù guo sān cì Běijīng.`\n\n' +
+    'Bei einem Ortsobjekt darf die Angabe davor stehen: `Wǒ qù guo sān cì Běijīng.` (Ich war dreimal in Peking.)\n\n' +
     '**Andauernd bis jetzt:** Mit `le` am Satzende wird aus der abgeschlossenen Dauer eine ' +
     'laufende:\n' +
     '`Wǒ xué le sān nián Hànyǔ.` – Ich habe drei Jahre Chinesisch gelernt (und aufgehört).\n' +
@@ -236,6 +242,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Wǒ xué le Hànyǔ sān nián.',
+      de: 'Ich habe drei Jahre Chinesisch gelernt.',
       answer: ['Wǒ xué Hànyǔ xué le sān nián.', 'Wǒ xué le sān nián de Hànyǔ.',
                'Hànyǔ wǒ xué le sān nián.'],
       note: 'Mit Objekt braucht es eine der drei Bauweisen – die Dauer darf nicht einfach hinten stehen.' },
@@ -255,6 +262,7 @@ GrammatikDaten.add([
       note: '`le` markiert den Abschluss, die Dauer folgt dahinter.' },
     { type: 'transformation',
       prompt: 'Drücke aus, dass du weiterlernst: Wǒ xué le sān nián Hànyǔ.',
+      de: 'Ich habe drei Jahre Chinesisch gelernt.',
       answer: ['Wǒ xué le sān nián Hànyǔ le.'],
       note: 'Ein zweites `le` am Satzende macht aus der abgeschlossenen Dauer eine andauernde.' },
     { type: 'sentenceOrder',
@@ -321,6 +329,7 @@ GrammatikDaten.add([
       note: '`yòu … yòu …` reiht gleichgerichtete Eigenschaften auf.' },
     { type: 'errorCorrection',
       prompt: 'Tā yòu chīfàn yòu kàn diànshì.',
+      de: 'Er isst und sieht dabei fern.',
       answer: ['Tā yībiān chīfàn yībiān kàn diànshì.'],
       note: 'Bei parallelen Handlungen steht `yībiān … yībiān …`, nicht `yòu … yòu …`.' },
     { type: 'sentenceOrder',
@@ -356,7 +365,7 @@ GrammatikDaten.add([
     '**Verwandtes:**\n\n' +
     '`gèng` – noch mehr, im Vergleich: `Jīntiān gèng lěng.` (Heute ist es noch kälter.)\n' +
     '`zuì` – am meisten: `Zhè ge zuì hǎo.` (Das ist am besten.)\n' +
-    '`bǐjiào` – ziemlich, vergleichsweise: `Zhè ge bǐjiào guì.`',
+    '`bǐjiào` – ziemlich, vergleichsweise: `Zhè ge bǐjiào guì.` (Das ist ziemlich teuer.)',
   examples: [
     { pinyin: 'Tiānqì yuè lái yuè lěng.', de: 'Das Wetter wird immer kälter.', hanzi: '天气越来越冷。' },
     { pinyin: 'Kōngqì wūrǎn yuè lái yuè yánzhòng.', de: 'Die Luftverschmutzung wird immer schlimmer.', hanzi: '空气污染越来越严重。' },
@@ -373,6 +382,7 @@ GrammatikDaten.add([
       note: '`yuè lái yuè` heißt „immer …er“ mit der Zeit als Maßstab.' },
     { type: 'errorCorrection',
       prompt: 'Tiānqì yuè lái yuè hěn lěng.',
+      de: 'Das Wetter wird immer kälter.',
       answer: ['Tiānqì yuè lái yuè lěng.'],
       note: 'Bei `yuè lái yuè` steht kein `hěn` – die Steigerung ersetzt den Füller.' },
     { type: 'multipleChoice',
@@ -392,6 +402,7 @@ GrammatikDaten.add([
       hanzi: '他越说越快。' },
     { type: 'transformation',
       prompt: 'Drücke mit `yuè lái yuè` aus: Kōngqì wūrǎn hěn yánzhòng. (immer schlimmer)',
+      de: 'Die Luftverschmutzung ist schlimm.',
       answer: ['Kōngqì wūrǎn yuè lái yuè yánzhòng.'],
       note: '`hěn` fällt weg, `yuè lái yuè` tritt an seine Stelle.' },
     { type: 'typing',
@@ -413,7 +424,7 @@ GrammatikDaten.add([
     '**Die Stellung von `jiù` ist streng:** Es steht **direkt vor dem Verb**, nie am ' +
     'Satzanfang. `Rúguǒ xià yǔ, jiù wǒ bú qù` ist falsch – das Subjekt kommt zuerst.\n\n' +
     '**`rúguǒ` darf wegfallen**, `jiù` allein trägt die Bedingung schon:\n' +
-    '`Míngtiān xià yǔ, wǒ jiù bú qù le.`\n\n' +
+    '`Míngtiān xià yǔ, wǒ jiù bú qù le.` (Wenn es morgen regnet, gehe ich nicht.)\n\n' +
     '**Varianten:**\n\n' +
     '`yàoshi` – umgangssprachlich für `rúguǒ`\n' +
     '`de huà` – nachgestellt, oft zusätzlich: `Rúguǒ nǐ yǒu shíjiān de huà, …`\n' +
@@ -433,12 +444,13 @@ GrammatikDaten.add([
   ],
   drills: [
     { type: 'fillBlank',
-      prompt: 'Rúguǒ míngtiān xià yǔ, wǒ ___ bú qù le.',
+      prompt: 'Rúguǒ míngtiān xià yǔ, wǒ ___ bú qù le. (Wenn es morgen regnet, gehe ich nicht.)',
       options: ['jiù', 'suǒyǐ', 'dànshì', 'cái'],
       answer: 'jiù',
       note: '`rúguǒ` verlangt `jiù` vor dem Verb der Folge.' },
     { type: 'errorCorrection',
       prompt: 'Rúguǒ xià yǔ, jiù wǒ bú qù.',
+      de: 'Wenn es regnet, gehe ich nicht.',
       answer: ['Rúguǒ xià yǔ, wǒ jiù bú qù.'],
       note: '`jiù` steht direkt vor dem Verb – das Subjekt kommt davor.' },
     { type: 'multipleChoice',
@@ -453,6 +465,7 @@ GrammatikDaten.add([
       note: 'Beide stehen vor dem Verb, tragen aber gegensätzliche Wertungen.' },
     { type: 'transformation',
       prompt: 'Lasse `rúguǒ` weg: Rúguǒ míngtiān xià yǔ, wǒ jiù bú qù le.',
+      de: 'Wenn es morgen regnet, gehe ich nicht.',
       answer: ['Míngtiān xià yǔ, wǒ jiù bú qù le.'],
       note: '`jiù` allein trägt die Bedingung bereits.' },
     { type: 'sentenceOrder',
@@ -517,6 +530,7 @@ GrammatikDaten.add([
       note: 'Alles, was vor `de` steht, beschreibt das Wort dahinter.' },
     { type: 'errorCorrection',
       prompt: 'Zhè shì shū de wǒ zuótiān mǎi.',
+      de: 'Das ist das Buch, das ich gestern gekauft habe.',
       answer: ['Zhè shì wǒ zuótiān mǎi de shū.'],
       note: 'Die Beschreibung gehört vor `de`, das Substantiv dahinter.' },
     { type: 'fillBlank',
@@ -525,6 +539,7 @@ GrammatikDaten.add([
       note: '`de` verbindet die Beschreibung mit dem Substantiv.' },
     { type: 'transformation',
       prompt: 'Lasse das Substantiv weg: Zuótiān mǎi de shū hěn guì.',
+      de: 'Das gestern gekaufte Buch war teuer.',
       answer: ['Zuótiān mǎi de hěn guì.'],
       note: 'Ist klar, wovon die Rede ist, endet der Ausdruck bei `de`.' },
     { type: 'typing',
@@ -585,10 +600,12 @@ GrammatikDaten.add([
       note: 'Der hervorgehobene Teil steht zwischen `shì` und dem Verb, `de` schließt ab.' },
     { type: 'transformation',
       prompt: 'Hebe den Zeitpunkt hervor: Wǒ zuótiān lái le.',
+      de: 'Ich bin gestern gekommen.',
       answer: ['Wǒ shì zuótiān lái de.', 'Wǒ zuótiān lái de.'],
       note: '`le` weicht dem Rahmen `shì … de`.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ shì zuótiān lái de le.',
+      de: 'Ich bin gestern gekommen.',
       answer: ['Wǒ shì zuótiān lái de.'],
       note: '`shì … de` und `le` schließen einander aus.' },
     { type: 'sentenceOrder',
@@ -626,7 +643,7 @@ GrammatikDaten.add([
     '`Lǎoshī ràng wǒmen duō liànxí.` – Der Lehrer lässt uns viel üben.\n' +
     '`Wǒ qǐng nǐ chīfàn.` – Ich lade dich zum Essen ein.\n\n' +
     '**Die Verneinung steht vor dem ersten Verb**, das die ganze Kette trägt:\n' +
-    '`Wǒ bú qù shāngdiàn mǎi dōngxi.`\n\n' +
+    '`Wǒ bú qù shāngdiàn mǎi dōngxi.` (Ich gehe nicht in den Laden einkaufen.)\n\n' +
     '**Der häufigste Fehler** ist, ein deutsches „um zu“ übersetzen zu wollen. Es gibt ' +
     'dafür kein Wort – die bloße Reihenfolge genügt.',
   examples: [
@@ -655,6 +672,7 @@ GrammatikDaten.add([
       hanzi: '我去商店买东西。' },
     { type: 'errorCorrection',
       prompt: 'Wǒ mǎi dōngxi qù shāngdiàn.',
+      de: 'Ich gehe in den Laden, um einzukaufen.',
       answer: ['Wǒ qù shāngdiàn mǎi dōngxi.'],
       note: 'Die Reihenfolge im Satz muss der Reihenfolge in der Wirklichkeit entsprechen.' },
     { type: 'fillBlank',
@@ -664,6 +682,7 @@ GrammatikDaten.add([
       note: '`yòng` nennt das Werkzeug und steht vor dem Hauptverb.' },
     { type: 'transformation',
       prompt: 'Verneine: Wǒ qù shāngdiàn mǎi dōngxi.',
+      de: 'Ich gehe in den Laden, um einzukaufen.',
       answer: ['Wǒ bú qù shāngdiàn mǎi dōngxi.', 'Wǒ bù qù shāngdiàn mǎi dōngxi.'],
       note: 'Die Verneinung steht vor dem ersten Verb der Kette.' },
     { type: 'typing',

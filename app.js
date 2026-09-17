@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var APP_VERSION = '1.1';
+  var APP_VERSION = '1.2';
 
   /* ---------- kleine Helfer ---------- */
 
@@ -634,7 +634,10 @@
     frage.innerHTML = mitLuecke(ex.prompt);
     buehne.appendChild(frage);
     if (ex.hanzi) buehne.appendChild(el('div', 'hanzi', ex.hanzi));
-    if (ex.hint) buehne.appendChild(el('div', 'hinweis-zeile', ex.hint));
+    /* Beim Vokabel-Lückentext ist `hint` die Übersetzung des Satzes – sie bekommt
+       deshalb dieselbe Auszeichnung wie bei den Grammatikaufgaben. */
+    if (ex.hint) buehne.appendChild(el('div', 'uebersetzung', ex.hint));
+    uebersetzungZeigen(ex);
 
     if (ex.options) { auswahlKnoepfe(karte, ex); return; }
     eingabefeld(karte, ex, 'Fehlendes Wort …');
@@ -679,10 +682,18 @@
     frage.innerHTML = esc(ex.prompt);
     buehne.appendChild(frage);
     if (ex.hanzi) buehne.appendChild(el('div', 'hanzi', ex.hanzi));
+    uebersetzungZeigen(ex);
     if (ex.hint) buehne.appendChild(el('div', 'hinweis-zeile', ex.hint));
-    buehne.appendChild(el('div', 'hinweis-zeile',
-      'Töne sind nicht nötig – „ni hao“ und „ni3 hao3“ gelten genauso.'));
     eingabefeld(karte, ex, 'Antwort auf Pinyin …');
+  }
+
+  /** Die deutsche Bedeutung des chinesischen Satzes in der Aufgabe.
+   *  Bei Übersetzungsaufgaben ist `ex.de` leer – dort wäre sie die Lösung. */
+  function uebersetzungZeigen(ex) {
+    if (!ex.de) return;
+    var d = el('div', 'uebersetzung');
+    d.textContent = (ex.type === 'errorCorrection' ? 'Gemeint ist: ' : '') + ex.de;
+    $('#ses-buehne').appendChild(d);
   }
 
   function eingabefeld(karte, ex, platzhalter) {

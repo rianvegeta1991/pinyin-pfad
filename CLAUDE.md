@@ -106,6 +106,34 @@ Vorlagen, aus denen `uebungen.js` die Exercise-Objekte baut:
 Bei den drei Tippformen darf `answer` eine **Liste gleichwertiger Lösungen** sein –
 das ist wichtig, weil `bù`/`bú` und Wortstellungsvarianten beide richtig sind.
 
+## Jeder chinesische Satz wird übersetzt
+
+**Regel: Steht in einer Aufgabe ein chinesischer Satz, steht die deutsche Bedeutung
+dabei.** Wer eine neue Aufgabe schreibt, hält sich daran. Wo die Übersetzung steht,
+hängt an der Form:
+
+| Form | wo die Übersetzung steht |
+|---|---|
+| `errorCorrection` | Feld `de` – wird als „Gemeint ist: …“ unter dem Satz angezeigt |
+| `transformation` | Feld `de` – die Bedeutung des **Ausgangssatzes** |
+| `fillBlank` (Grammatik) | in Klammern am Ende des `prompt` |
+| `fillBlank` (Vokabel) | automatisch: `hint` = die deutsche Fassung des Satzes aus dem Satzindex |
+| `flashcard`, `multipleChoice`, `trueFalse`, `matching` (Vokabel) | die deutsche Seite ist Teil der Aufgabe |
+
+**Die Ausnahme sind Übersetzungsaufgaben.** Bei `typing` und `sentenceOrder` ist der
+deutsche Satz die **Aufgabe**, die chinesische Fassung die Lösung – dort bleibt `de`
+leer, sonst stünde die Antwort daneben. `uebungen.js` reicht `de` nur durch, es füllt
+nichts auf.
+
+Dasselbe gilt für **Auswahlfragen, bei denen gerade die Bedeutung geprüft wird**
+(`a2-richtung`, `a2-le-satzende`): Die Optionen bleiben unübersetzt, weil eine Glosse
+die Lösung verraten würde – die Bedeutungen stehen stattdessen im `note`, also in der
+Rückmeldung nach der Antwort.
+
+In den **Erklärtexten** bekommt jeder chinesische Satz eine Glosse, meist als
+` – Deutsch` oder `(Deutsch)` dahinter. Zeigt ein Absatz mehrere Varianten desselben
+Satzes, genügt eine Sammelglosse („Alle drei heißen: …“).
+
 ## Der Satzindex (wichtig)
 
 Lückentexte brauchen einen Satz, der die gesuchte Vokabel enthält. Jeder Vokabel

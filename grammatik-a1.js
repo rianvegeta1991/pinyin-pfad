@@ -53,6 +53,7 @@ GrammatikDaten.add([
       hanzi: '他是我的老师。' },
     { type: 'errorCorrection',
       prompt: 'Wǒmen de shì xuésheng.',
+      de: 'Wir sind Schüler.',
       answer: ['Wǒmen shì xuésheng.'],
       note: 'Nach dem Subjekt darf kein `de` stehen. `de` bildet Besitz („unser“), nicht das Subjekt.' },
     { type: 'typing',
@@ -106,10 +107,12 @@ GrammatikDaten.add([
       note: '`gāoxìng` ist ein Adjektiv. Vor Adjektiven steht nie `shì`, sondern `hěn`.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ shì hěn máng.',
+      de: 'Ich bin beschäftigt.',
       answer: ['Wǒ hěn máng.'],
       note: 'Adjektiv-Prädikat: `shì` fällt weg, `hěn` bleibt.' },
     { type: 'transformation',
       prompt: 'Verneine: Tā shì wǒ de tóngshì.',
+      de: 'Er ist mein Kollege.',
       answer: ['Tā bú shì wǒ de tóngshì.', 'Tā bù shì wǒ de tóngshì.'],
       note: '`bù` steht direkt vor `shì` und wird davor zu `bú`.' },
     { type: 'sentenceOrder',
@@ -133,15 +136,15 @@ GrammatikDaten.add([
     'Chinesische Fragen stellen den Satz **nicht um**. Das ist die gute Nachricht: Wer den ' +
     'Aussagesatz kann, kann auch die Frage.\n\n' +
     '**Ja/Nein-Fragen** entstehen, indem man `ma` ans Ende hängt:\n' +
-    '`Nǐ shì lǎoshī.` → `Nǐ shì lǎoshī ma?`\n\n' +
+    '`Nǐ shì lǎoshī.` (Du bist Lehrer.) → `Nǐ shì lǎoshī ma?` (Bist du Lehrer?)\n\n' +
     '**W-Fragen** ersetzen einfach das gesuchte Wort an Ort und Stelle – die Wortstellung ' +
     'bleibt gleich. Wo im Deutschen das Fragewort nach vorn rückt, bleibt es im Chinesischen ' +
     'genau dort stehen, wo die Antwort stehen würde:\n\n' +
-    '`Tā shì lǎoshī.` → `Tā shì shéi?` (Wer ist er?)\n' +
-    '`Wǒ qù Běijīng.` → `Nǐ qù nǎr?` (Wohin gehst du?)\n\n' +
+    '`Tā shì lǎoshī.` (Er ist Lehrer.) → `Tā shì shéi?` (Wer ist er?)\n' +
+    '`Wǒ qù Běijīng.` (Ich fahre nach Peking.) → `Nǐ qù nǎr?` (Wohin gehst du?)\n\n' +
     'Die wichtigsten Fragewörter: `shéi` (wer), `shénme` (was), `nǎ` (welcher), ' +
     '`nǎr` (wo), `zěnme` (wie), `wèishénme` (warum), `jǐ` / `duōshao` (wie viele).\n\n' +
-    '**Wichtig:** `ma` und ein Fragewort schließen sich aus. `Nǐ qù nǎr ma?` ist falsch – ' +
+    '**Wichtig:** `ma` und ein Fragewort schließen sich aus. `Nǐ qù nǎr ma?` (gemeint: Wohin gehst du?) ist falsch – ' +
     'ein Fragewort macht den Satz schon zur Frage.',
   examples: [
     { pinyin: 'Nǐ shì lǎoshī ma?', de: 'Bist du Lehrer?', hanzi: '你是老师吗？' },
@@ -154,6 +157,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'transformation',
       prompt: 'Mache eine Ja/Nein-Frage daraus: Nǐ shì xuésheng.',
+      de: 'Du bist Schüler.',
       answer: ['Nǐ shì xuésheng ma?', 'Nǐ shì xuésheng ma'],
       note: 'Einfach `ma` anhängen – die Wortstellung bleibt unverändert.' },
     { type: 'fillBlank',
@@ -163,13 +167,15 @@ GrammatikDaten.add([
       note: '`nǎr` steht genau dort, wo im Antwortsatz der Ort stünde.' },
     { type: 'errorCorrection',
       prompt: 'Nǐ qù nǎr ma?',
+      de: 'Wohin gehst du?',
       answer: ['Nǐ qù nǎr?', 'Nǐ qù nǎr'],
       note: 'Fragewort und `ma` zusammen geht nicht – eines von beiden reicht.' },
     { type: 'multipleChoice',
       prompt: 'Wie fragt man „Wer ist er?“',
       options: ['Tā shì shéi?', 'Shéi tā shì?', 'Shéi shì tā ma?', 'Tā shéi shì?'],
       answer: 'Tā shì shéi?',
-      note: 'Das Fragewort bleibt an der Stelle der Antwort: Tā shì [lǎoshī / shéi].' },
+      note: 'Alle vier wollen „Wer ist er?" sagen – nur der erste tut es richtig. Das Fragewort ' +
+            'bleibt an der Stelle der Antwort: Tā shì [lǎoshī / shéi].' },
     { type: 'sentenceOrder',
       prompt: 'Warum isst du nicht?',
       options: ['bù', 'nǐ', 'chī', 'wèishénme'],
@@ -222,6 +228,7 @@ GrammatikDaten.add([
       note: 'Vor einem Zähleinheitswort heißt „zwei“ immer `liǎng`, nicht `èr`.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ yǒu sān péngyou.',
+      de: 'Ich habe drei Freunde.',
       answer: ['Wǒ yǒu sān ge péngyou.'],
       note: 'Zwischen Zahl und Substantiv fehlt das Zähleinheitswort.' },
     { type: 'multipleChoice',
@@ -260,7 +267,7 @@ GrammatikDaten.add([
     '2. **als eigenständiges Verb** „sich befinden“: `Wǒ zài jiā.` (Ich bin zu Hause.) ' +
     'Hier steht kein weiteres Verb mehr.\n\n' +
     'Die Zeitangabe darf auch ganz vorn stehen, vor dem Subjekt: `Míngtiān wǒ zài jiā ' +
-    'xuéxí.` Das betont die Zeit etwas stärker. Ans Satzende gehört sie nie.',
+    'xuéxí.` (Ich lerne morgen zu Hause.) Das betont die Zeit etwas stärker. Ans Satzende gehört sie nie.',
   examples: [
     { pinyin: 'Wǒ zài jiā.', de: 'Ich bin zu Hause.', hanzi: '我在家。' },
     { pinyin: 'Wǒ zài jiā xuéxí.', de: 'Ich lerne zu Hause.', hanzi: '我在家学习。' },
@@ -272,6 +279,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Wǒ xuéxí zài jiā.',
+      de: 'Ich lerne zu Hause.',
       answer: ['Wǒ zài jiā xuéxí.'],
       note: 'Die Ortsangabe steht vor dem Verb, nicht dahinter.' },
     { type: 'fillBlank',
@@ -296,6 +304,7 @@ GrammatikDaten.add([
       note: 'Ohne folgendes Verb bedeutet `zài` selbst „sich befinden“.' },
     { type: 'transformation',
       prompt: 'Stelle die Zeitangabe nach vorn: Wǒ míngtiān zài jiā xuéxí.',
+      de: 'Ich lerne morgen zu Hause.',
       answer: ['Míngtiān wǒ zài jiā xuéxí.'],
       note: 'Die Zeit darf vor oder nach dem Subjekt stehen – nur nie am Satzende.' },
     { type: 'typing',
@@ -345,6 +354,7 @@ GrammatikDaten.add([
       note: 'Chinesische Verben sind unveränderlich; die Zeit steckt in Wörtern wie `zuótiān` oder `míngtiān`.' },
     { type: 'transformation',
       prompt: 'Setze in die Vergangenheit (nur das Zeitwort ändern): Wǒ míngtiān qù Běijīng.',
+      de: 'Ich fahre morgen nach Peking.',
       answer: ['Wǒ zuótiān qù Běijīng.'],
       note: 'Nur `míngtiān` wird zu `zuótiān` – `qù` bleibt unverändert.' },
     { type: 'fillBlank',
@@ -354,6 +364,7 @@ GrammatikDaten.add([
       note: '`měi tiān` heißt „jeden Tag“ und steht vor dem Verb.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ qù zuótiān Běijīng.',
+      de: 'Ich fuhr gestern nach Peking.',
       answer: ['Wǒ zuótiān qù Běijīng.'],
       note: 'Die Zeitangabe steht vor dem Verb.' },
     { type: 'sentenceOrder',
@@ -419,10 +430,12 @@ GrammatikDaten.add([
       hanzi: '那是老师的车。' },
     { type: 'errorCorrection',
       prompt: 'Zhè shì shū wǒ de.',
+      de: 'Das ist mein Buch.',
       answer: ['Zhè shì wǒ de shū.'],
       note: 'Der Besitzer steht vorn: `wǒ de shū`, nicht `shū wǒ de`.' },
     { type: 'transformation',
       prompt: 'Lasse das Substantiv weg: Zhè shì wǒ de shǒujī.',
+      de: 'Das ist mein Handy.',
       answer: ['Zhè shì wǒ de.'],
       note: 'Ist klar, wovon die Rede ist, genügt `wǒ de` – „meins“.' },
     { type: 'typing',
@@ -452,7 +465,7 @@ GrammatikDaten.add([
     '1. Das Verb `yǒu` (haben) wird **immer** mit `méi` verneint, nie mit `bù`. ' +
     '`méiyǒu` – niemals `bù yǒu`.\n' +
     '2. Nach `méi` fällt die Abschlusspartikel `le` weg. `Wǒ méi chī le` ist falsch; ' +
-    'richtig ist `Wǒ méi chī.`\n\n' +
+    'richtig ist `Wǒ méi chī.` (Ich habe nicht gegessen.)\n\n' +
     '**Tonwandel:** Vor einer Silbe im 4. Ton wird `bù` zu `bú`: `bú shì`, `bú qù`, ' +
     '`bú duì`. In der tonlosen Schreibweise fällt das nicht auf – gesprochen schon.',
   examples: [
@@ -486,10 +499,12 @@ GrammatikDaten.add([
       note: '`méi` verneint Geschehenes, `bù` alles Übrige.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ méi chī le.',
+      de: 'Ich habe nicht gegessen.',
       answer: ['Wǒ méi chī.'],
       note: 'Nach `méi` fällt `le` weg – beides zusammen geht nicht.' },
     { type: 'transformation',
       prompt: 'Verneine für die Vergangenheit: Tā zuótiān lái le.',
+      de: 'Er ist gestern gekommen.',
       answer: ['Tā zuótiān méi lái.'],
       note: '`le` verschwindet, `méi` tritt vor das Verb.' },
     { type: 'typing',
@@ -531,6 +546,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Wǒ bù yǒu shíjiān.',
+      de: 'Ich habe keine Zeit.',
       answer: ['Wǒ méiyǒu shíjiān.', 'Wǒ méi yǒu shíjiān.'],
       note: '`yǒu` wird ausschließlich mit `méi` verneint.' },
     { type: 'sentenceOrder',
@@ -554,6 +570,7 @@ GrammatikDaten.add([
       note: 'Die A-nicht-A-Frage wiederholt das Verb: `yǒu méiyǒu`.' },
     { type: 'transformation',
       prompt: 'Mache eine A-nicht-A-Frage: Nǐ yǒu wèntí ma?',
+      de: 'Hast du Fragen?',
       answer: ['Nǐ yǒu méiyǒu wèntí?', 'Nǐ yǒu méiyǒu wèntí'],
       note: 'Statt `ma` wird das Verb bejaht und verneint wiederholt.' },
     { type: 'typing',
@@ -596,6 +613,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'errorCorrection',
       prompt: 'Jīntiān shì hěn lěng.',
+      de: 'Heute ist es kalt.',
       answer: ['Jīntiān hěn lěng.'],
       note: 'Vor einem Adjektiv steht nie `shì`.' },
     { type: 'multipleChoice',
@@ -615,6 +633,7 @@ GrammatikDaten.add([
       note: 'Verneint fällt `hěn` weg – `bù` übernimmt seinen Platz.' },
     { type: 'transformation',
       prompt: 'Verneine: Jīntiān hěn lěng.',
+      de: 'Heute ist es kalt.',
       answer: ['Jīntiān bù lěng.'],
       note: '`hěn` verschwindet, `bù` tritt an seine Stelle.' },
     { type: 'sentenceOrder',

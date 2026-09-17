@@ -21,6 +21,9 @@ Diese App dreht die übliche Reihenfolge um:
   Auch Leerzeichen und Bindestriche sind egal.
 - **Schriftzeichen sind eine Zugabe.** Sie stehen überall dabei, lassen sich in
   den Einstellungen ausblenden und sind an keiner Stelle Eingabe.
+- **Jeder chinesische Satz in einer Aufgabe wird übersetzt.** Man rät nie, worum
+  es geht. Ausgenommen sind Übersetzungsaufgaben – dort ist der deutsche Satz die
+  Aufgabe und die chinesische Fassung die Lösung.
 
 ## Was drin ist
 

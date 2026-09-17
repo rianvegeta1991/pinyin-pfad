@@ -20,7 +20,7 @@ GrammatikDaten.add([
     '`Wǒ qù bu liǎo.` – Ich schaffe es nicht hin (zu weit, zu spät, keine Kraft).\n\n' +
     '**Die verneinte Form ist im Alltag viel häufiger** als die bejahte. `tīng bù dǒng` ' +
     'hört man ständig, `tīng de dǒng` seltener – meist als Antwort auf eine Frage.\n\n' +
-    '**Frage:** A-nicht-A über beide Formen: `Nǐ tīng de dǒng tīng bù dǒng?`\n\n' +
+    '**Frage:** A-nicht-A über beide Formen: `Nǐ tīng de dǒng tīng bù dǒng?` (Verstehst du es?)\n\n' +
     '**Nützliche feste Wendungen:**\n' +
     '`lái de jí` – es zeitlich schaffen · `lái bu jí` – zu spät sein\n' +
     '`shòu de liǎo` – ertragen können · `shòu bu liǎo` – nicht aushalten\n' +
@@ -37,6 +37,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'transformation',
       prompt: 'Mache daraus ein verneintes potentielles Komplement: tīng dǒng',
+      de: 'tīng dǒng = verstanden haben (beim Hören).',
       answer: ['tīng bù dǒng', 'tīng bu dǒng'],
       note: '`bù` rutscht zwischen Verb und Ergebnis.' },
     { type: 'multipleChoice',
@@ -55,7 +56,8 @@ GrammatikDaten.add([
       answer: 'bù',
       note: '`kàn bù wán` – das Ergebnis ist nicht erreichbar.' },
     { type: 'errorCorrection',
-      prompt: 'Wǒ méi tīng dǒng tā shuō de huà. (gemeint: Ich verstehe es grundsätzlich nicht.)',
+      prompt: 'Wǒ méi tīng dǒng tā shuō de huà.',
+      de: 'Ich verstehe grundsätzlich nicht, was er sagt.',
       answer: ['Wǒ tīng bù dǒng tā shuō de huà.'],
       note: '`méi tīng dǒng` heißt „habe es nicht verstanden“ (einmalig); die Unfähigkeit ist `tīng bù dǒng`.' },
     { type: 'sentenceOrder',
@@ -110,6 +112,7 @@ GrammatikDaten.add([
       note: '`lián` verlangt `dōu` oder `yě` im zweiten Teil.' },
     { type: 'errorCorrection',
       prompt: 'Tā lián Hànzì bú rènshi.',
+      de: 'Er kennt nicht einmal die Schriftzeichen.',
       answer: ['Tā lián Hànzì dōu bú rènshi.', 'Tā lián Hànzì yě bú rènshi.'],
       note: '`lián` allein genügt nicht – `dōu` oder `yě` muss folgen.' },
     { type: 'multipleChoice',
@@ -124,6 +127,7 @@ GrammatikDaten.add([
       note: 'Deshalb wirkt die Wendung als Argument so stark.' },
     { type: 'transformation',
       prompt: 'Verstärke mit `lián … dōu …`: Wǒ méiyǒu qián.  (nicht einen Cent)',
+      de: 'Ich habe kein Geld.',
       answer: ['Wǒ lián yì fēn qián dōu méiyǒu.', 'Wǒ lián yì fēn qián yě méiyǒu.'],
       note: 'Das Hervorgehobene rückt hinter `lián`, `dōu` steht vor dem Prädikat.' },
     { type: 'sentenceOrder',
@@ -149,13 +153,13 @@ GrammatikDaten.add([
     'Japanisch.\n\n' +
     '**Die Regel zur Wortstellung, die oft falsch gemacht wird:**\n\n' +
     '- **Gleiches Subjekt** in beiden Teilen → `bù dàn` steht **hinter** dem Subjekt:\n' +
-    '  `Tā bù dàn cōngming, érqiě hěn nǔlì.`\n' +
+    '  `Tā bù dàn cōngming, érqiě hěn nǔlì.` (Er ist nicht nur klug, sondern auch fleißig.)\n' +
     '- **Verschiedene Subjekte** → `bù dàn` steht **vor** dem ersten Subjekt:\n' +
-    '  `Bù dàn tā qù le, érqiě tā de jiārén yě qù le.`\n\n' +
+    '  `Bù dàn tā qù le, érqiě tā de jiārén yě qù le.` (Nicht nur er ging hin, auch seine Familie.)\n\n' +
     'Im zweiten Fall steht im Folgeteil zusätzlich `yě` oder `dōu`.\n\n' +
     '**Varianten:**\n' +
     '`bù jǐn … érqiě …` – schriftsprachlicher\n' +
-    '`… , hái …` – knapper: `Tā huì Hànyǔ, hái huì Rìyǔ.`\n' +
+    '`… , hái …` – knapper: `Tā huì Hànyǔ, hái huì Rìyǔ.` (Er kann Chinesisch und außerdem Japanisch.)\n' +
     '`bù dàn bù … fǎn’ér …` – nicht nur nicht …, sondern im Gegenteil …\n' +
     '  `Tā bù dàn bù shēngqì, fǎn’ér xiào le.` – Er wurde nicht einmal böse, sondern lachte.\n\n' +
     '**Abgrenzung zu `yòu … yòu …`:** Dieses reiht gleichrangig auf, `bù dàn … érqiě …` ' +
@@ -171,7 +175,7 @@ GrammatikDaten.add([
   ],
   drills: [
     { type: 'fillBlank',
-      prompt: 'Tā bù dàn huì Hànyǔ, ___ huì Rìyǔ.',
+      prompt: 'Tā bù dàn huì Hànyǔ, ___ huì Rìyǔ. (Er kann nicht nur Chinesisch, sondern auch Japanisch.)',
       options: ['érqiě', 'dànshì', 'suǒyǐ', 'kěshì'],
       answer: 'érqiě',
       note: '`bù dàn` gehört mit `érqiě` zusammen.' },
@@ -187,10 +191,12 @@ GrammatikDaten.add([
       note: 'Gleiches Subjekt → `bù dàn` dahinter; verschiedene Subjekte → davor.' },
     { type: 'errorCorrection',
       prompt: 'Tā bù dàn qù le, érqiě tā de jiārén yě qù le.',
+      de: 'Nicht nur er ging hin, auch seine Familie.',
       answer: ['Bù dàn tā qù le, érqiě tā de jiārén yě qù le.'],
       note: 'Bei verschiedenen Subjekten rückt `bù dàn` vor das erste Subjekt.' },
     { type: 'transformation',
       prompt: 'Verbinde mit `bù dàn … érqiě …`: Zhè ge fāng\'àn shěng qián. Zhè ge fāng\'àn shěng shíjiān.',
+      de: 'Dieses Konzept spart Geld. Dieses Konzept spart Zeit.',
       answer: ['Zhè ge fāng\'àn bù dàn shěng qián, érqiě shěng shíjiān.'],
       note: 'Gleiches Subjekt – `bù dàn` steht dahinter, im zweiten Teil entfällt die Wiederholung.' },
     { type: 'sentenceOrder',
@@ -240,7 +246,7 @@ GrammatikDaten.add([
   ],
   drills: [
     { type: 'fillBlank',
-      prompt: 'Jǐnguǎn hěn lèi, tā ___ jiānchí wánchéng le.',
+      prompt: 'Jǐnguǎn hěn lèi, tā ___ jiānchí wánchéng le. (Obwohl er müde war, hat er es trotzdem zu Ende gebracht.)',
       options: ['háishi', 'jiù', 'cái', 'yīnwèi'],
       answer: 'háishi',
       note: 'Hier heißt `háishi` „dennoch“, nicht „oder“.' },
@@ -256,6 +262,7 @@ GrammatikDaten.add([
       note: '„Obwohl er müde war“ (tatsächlich) gegen „selbst wenn es scheitern sollte“ (angenommen).' },
     { type: 'errorCorrection',
       prompt: 'Wúlùn hěn lèi, wǒ dōu yào qù.',
+      de: 'Obwohl ich müde bin, will ich trotzdem hin.',
       answer: ['Jǐnguǎn hěn lèi, wǒ háishi yào qù.', 'Suīrán hěn lèi, dànshì wǒ yào qù.'],
       note: 'Nach `wúlùn` muss ein Fragewort oder eine Alternative folgen, keine einfache Aussage.' },
     { type: 'fillBlank',
@@ -321,6 +328,7 @@ GrammatikDaten.add([
       note: '`de` ohne folgendes Substantiv macht aus dem Ausdruck selbst ein Substantiv.' },
     { type: 'transformation',
       prompt: 'Lasse das Substantiv weg: Wǒ yào hóng de yīfu.',
+      de: 'Ich will das rote Kleidungsstück.',
       answer: ['Wǒ yào hóng de.'],
       note: 'Der Ausdruck endet bei `de` und meint „das rote“.' },
     { type: 'fillBlank',
@@ -333,7 +341,8 @@ GrammatikDaten.add([
       answer: ['tā shuō de', 'hé', 'zuò de', 'bù yíyàng'],
       hanzi: '他说的和做的不一样。' },
     { type: 'errorCorrection',
-      prompt: 'Wǒ shuō nǐ dǒng le ma? (gemeint: Hast du verstanden, WAS ich gesagt habe?)',
+      prompt: 'Wǒ shuō nǐ dǒng le ma?',
+      de: 'Hast du verstanden, was ich gesagt habe?',
       answer: ['Wǒ shuō de nǐ dǒng le ma?'],
       note: 'Ohne `de` fehlt die Nominalisierung – der Satz hieße „Habe ich gesagt, dass du verstanden hast?“' },
     { type: 'typing',
@@ -389,6 +398,7 @@ GrammatikDaten.add([
       note: 'Ist der Urheber unbekannt, hilft `rén`: `ràng rén ná zǒu le`.' },
     { type: 'errorCorrection',
       prompt: 'Wǒ de bēizi ràng dǎpò le.',
+      de: 'Meine Tasse wurde zerbrochen.',
       answer: ['Wǒ de bēizi ràng rén dǎpò le.', 'Wǒ de bēizi bèi dǎpò le.'],
       note: '`ràng` braucht einen Handelnden – entweder `rén` einsetzen oder auf `bèi` ausweichen.' },
     { type: 'multipleChoice',
@@ -403,6 +413,7 @@ GrammatikDaten.add([
       note: 'Folgt ein zweites Verb als Auftrag, ist es Veranlassung; endet der Satz mit einer Ergänzung, Passiv.' },
     { type: 'transformation',
       prompt: 'Ersetze `bèi` durch die umgangssprachliche Variante `ràng`: Wǒ de bēizi bèi tā dǎpò le.',
+      de: 'Meine Tasse wurde von ihm zerbrochen.',
       answer: ['Wǒ de bēizi ràng tā dǎpò le.'],
       note: 'Der Handelnde `tā` ist genannt, also ist `ràng` möglich.' },
     { type: 'sentenceOrder',
@@ -475,6 +486,7 @@ GrammatikDaten.add([
       hanzi: '一方面价格高，另一方面质量也不好。' },
     { type: 'transformation',
       prompt: 'Ersetze den gesprochenen Konnektor durch den schriftsprachlichen: Búguò, zhè yě yǒu fēngxiǎn.',
+      de: 'Allerdings birgt das auch Risiken.',
       answer: ['Rán\'ér, zhè yě yǒu fēngxiǎn.'],
       note: '`búguò` (gesprochen) und `rán\'ér` (geschrieben) bedeuten dasselbe.' },
     { type: 'typing',
@@ -578,14 +590,14 @@ GrammatikDaten.add([
     'Wörtlich steht da „Er sagt, er kommt morgen“. Das ist die ganze Umformung.\n\n' +
     '**Was sich ändert, sind nur die Pronomen** – und zwar nach derselben Logik wie im ' +
     'Deutschen:\n' +
-    '`„Wǒ míngtiān lái.“` → `Tā shuō tā míngtiān lái.`\n\n' +
+    '`„Wǒ míngtiān lái.“` (Ich komme morgen.) → `Tā shuō tā míngtiān lái.` (Er sagt, er komme morgen.)\n\n' +
     '**Zeitwörter müssen mitgedacht werden.** Da es keine Zeitenfolge gibt, kann `míngtiān` ' +
     'mehrdeutig werden: morgen von wann aus? In sorgfältigen Texten ersetzt man es durch ' +
     'einen festen Bezug: `Tā shuō tā dì-èr tiān lái.` – Er sagte, er komme am nächsten Tag.\n\n' +
     '**Indirekte Fragen** behalten die Fragewortstellung, verlieren aber das `ma`:\n' +
     '`Tā wèn wǒ shénme shíhou lái.` – Er fragte mich, wann ich komme.\n' +
     '`Tā wèn wǒ qù bú qù.` – Er fragte, ob ich hingehe. (A-nicht-A statt „ob“)\n\n' +
-    'Für „ob“ gibt es außerdem `shìfǒu` (schriftsprachlich): `Tā wèn wǒ shìfǒu tóngyì.`\n\n' +
+    'Für „ob“ gibt es außerdem `shìfǒu` (schriftsprachlich): `Tā wèn wǒ shìfǒu tóngyì.` (Er fragte mich, ob ich zustimme.)\n\n' +
     '**Redeeinleitende Verben:** `shuō` (sagen) · `gàosu` (mitteilen) · `wèn` (fragen) · ' +
     '`rènwéi` (der Ansicht sein) · `biǎoshì` (erklären, offiziell) · `zhǐchū` (darauf ' +
     'hinweisen) · `chēng` (bezeichnen als, in Nachrichten).\n\n' +
@@ -602,6 +614,7 @@ GrammatikDaten.add([
   drills: [
     { type: 'transformation',
       prompt: 'Forme in indirekte Rede um: Tā shuō: „Wǒ míngtiān lái.“',
+      de: 'Er sagt: „Ich komme morgen.“',
       answer: ['Tā shuō tā míngtiān lái.'],
       note: 'Nur das Pronomen ändert sich – kein Konjunktiv, keine Zeitenverschiebung.' },
     { type: 'multipleChoice',
@@ -616,6 +629,7 @@ GrammatikDaten.add([
       note: 'Chinesische Verben sind unveränderlich, es gibt weder Konjunktiv noch Zeitenfolge.' },
     { type: 'errorCorrection',
       prompt: 'Tā wèn wǒ shénme shíhou lái ma.',
+      de: 'Er fragte mich, wann ich komme.',
       answer: ['Tā wèn wǒ shénme shíhou lái.'],
       note: 'In der indirekten Frage fällt `ma` weg; das Fragewort bleibt an seinem Platz.' },
     { type: 'fillBlank',
@@ -661,7 +675,7 @@ GrammatikDaten.add([
     '- Erstaunen: `Shì nǐ a!` – Ach, du bist es!\n\n' +
     'Die Silbe verändert sich lautlich nach dem vorangehenden Laut (`ya`, `wa`, `na`) – ' +
     'in der tonlosen Schreibweise sieht man das als `ya` oder `a`.\n\n' +
-    '**Der entscheidende Kontrast:** `Nǐ shì Déguó rén ma?` fragt echt. ' +
+    '**Der entscheidende Kontrast:** Alle drei sagen „Du bist Deutscher“ – `Nǐ shì Déguó rén ma?` fragt echt. ' +
     '`Nǐ shì Déguó rén ba?` vermutet und sucht Bestätigung. ' +
     '`Nǐ shì Déguó rén a!` ist Erstaunen, keine Frage.',
   examples: [
@@ -689,7 +703,7 @@ GrammatikDaten.add([
       answer: 'ba',
       note: '`ba` macht aus der Aussage einen weichen Vorschlag.' },
     { type: 'fillBlank',
-      prompt: 'Wǒ hěn hǎo, nǐ ___? (Und dir?)',
+      prompt: 'Wǒ hěn hǎo, nǐ ___? (Mir geht es gut, und dir?)',
       options: ['ne', 'ba', 'a', 'ma'],
       answer: 'ne',
       note: '`ne` bildet die kurze Rückfrage.' },
@@ -699,7 +713,8 @@ GrammatikDaten.add([
       answer: 'a',
       note: '`Zhēn piàoliang a!` – die Partikel trägt das Gefühl.' },
     { type: 'errorCorrection',
-      prompt: 'Wǒmen zǒu ma. (gemeint: Gehen wir doch.)',
+      prompt: 'Wǒmen zǒu ma.',
+      de: 'Gehen wir doch.',
       answer: ['Wǒmen zǒu ba.'],
       note: '`ma` würde daraus eine echte Frage machen; der Vorschlag braucht `ba`.' },
     { type: 'typing',
